@@ -7,8 +7,43 @@
     <title>les 1</title>
 </head>
 <body>
-    hallo wereld<br>
-    goeiemorgen
+    <h1>mijn pagina </h1>
+    <p class="achtergrond">achtergrond groen</p>
+    <p class="achtergrond">achtergrond blauw</p>
+    <p class="achtergrond">achtergrond white</p>
+    <p class="voorgrond">voorgrond oranje</p>
+    <p class="voorgrond">voorgrond geel</p>
+    <p class="voorgrond">voorgrond zwart</p>
+
+
+<script >
+
+    let achtergronden = document.getElementsByClassName('achtergrond');
+    let voorgronden = document.getElementsByClassName('voorgrond');
+    let achtergrondKleuren =['green','blue','white']
+    let voorgrondkleuren =['orange','yellow','black']
+
+    for(let i = 0; i<achtergronden.length;i++){
+        achtergronden[i].addEventListener("click",function(){
+            setAchtgrond(i)
+        });
+    }
+
+    function setAchtgrond(i){
+        document.body.style.background = achtergrondKleuren[i]
+    }
+
     
+    for(let i = 0; i<voorgronden.length;i++){
+        voorgronden[i].addEventListener("click",function(){
+            setVoorgrond(i)
+        });
+    }
+
+    function setVoorgrond(i){
+        document.body.style.color = voorgrondkleuren[i]
+    }
+    
+</script>
 </body>
 </html>
