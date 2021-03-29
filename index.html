@@ -4,46 +4,45 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>les 1</title>
+    <title>opdracht 2</title>
+    <style>
+        p:hover {
+            background : black;
+            color:yellow;
+            cursor: pointer;
+            }
+    </style>
 </head>
 <body>
-    <h1>mijn pagina </h1>
-    <p class="achtergrond">achtergrond groen</p>
-    <p class="achtergrond">achtergrond blauw</p>
-    <p class="achtergrond">achtergrond white</p>
-    <p class="voorgrond">voorgrond oranje</p>
-    <p class="voorgrond">voorgrond geel</p>
-    <p class="voorgrond">voorgrond zwart</p>
+    <h1>Mijn pagina</h1>
+    <p>maak de body blauw</p>
+    <p>masak de body rood</p>
+    <p>maak de body groen</p>
 
 
-<script >
 
-    let achtergronden = document.getElementsByClassName('achtergrond');
-    let voorgronden = document.getElementsByClassName('voorgrond');
-    let achtergrondKleuren =['green','blue','white']
-    let voorgrondkleuren =['orange','yellow','black']
+    <script>
+        document.getElementsByTagName('p')[0].addEventListener('click',clickHanlder01);
 
-    for(let i = 0; i<achtergronden.length;i++){
-        achtergronden[i].addEventListener("click",function(){
-            setAchtgrond(i)
-        });
-    }
+        function clickHanlder01(){
+            document.body.style.background = "blue";
+            document.body.style.color = "white"
+        }
 
-    function setAchtgrond(i){
-        document.body.style.background = achtergrondKleuren[i]
-    }
+        document.getElementsByTagName('p')[1].addEventListener('click',clickHanlder02);
 
+        function clickHanlder02(){
+            document.body.style.background = "red";
+        }
+
+
+        document.getElementsByTagName('p')[2].addEventListener('click',clickHanlder03);
+
+        function clickHanlder03(){
+            document.body.style.background = "green";
+        }
+
+    </script>
     
-    for(let i = 0; i<voorgronden.length;i++){
-        voorgronden[i].addEventListener("click",function(){
-            setVoorgrond(i)
-        });
-    }
-
-    function setVoorgrond(i){
-        document.body.style.color = voorgrondkleuren[i]
-    }
-    
-</script>
 </body>
 </html>
